@@ -1,0 +1,128 @@
+
+.wrapper
+    padding: 10px
+    margin: 0 auto
+    @media (max-width: 500px)
+        margin: 0 auto
+        padding: 10px 5px
+    p
+        font-size: 19.2px
+        letter-spacing: -0.32px
+        line-height: 1.58em
+        margin-bottom: 1em
+    h2
+        font-size: 2.5em
+        margin-top: .8em
+        margin-bottom: .8em
+        font-family: 'Fraunces', serif
+        font-weight: 600
+    h3
+        font-size: 2em
+        margin-top: .8em
+        margin-bottom: .8em
+        font-weight: 600
+    h4
+        font-size: 1.5em
+        margin-top: .8em
+        margin-bottom: .8em
+        font-weight: 600
+    h5
+        font-size: 1.2em
+        margin-top: .8em
+        margin-bottom: .8em
+        font-weight: 600
+    h6
+        font-size: 1em
+        margin-top: .8em
+        margin-bottom: .8em
+        font-weight: 600
+    button
+        background: var(--med-highlight)
+        color: var(--dark-highlight-overlap)
+    button.selected
+        background: var(--dark-highlight-accent)
+    .date-added, .top-note
+        font-style: italic
+        color: var(--accent)
+        background-color: #141414
+        padding: 6px
+    .anchor
+        background: var(--link-color)
+        display: inline-block
+        float: left
+        height: 20px
+        line-height: 0
+        margin-top: 0.35em
+        border-radius: 5px
+        padding: 2px
+        margin-right: 8px
+    ol
+        list-style: inside decimal
+    .chiclet
+        display: block
+        font-size: 17px
+        text-align: center
+        .obsession-entry
+            display: grid
+            grid-template-columns: repeat(6, 1fr)
+            gap: 10px
+            grid-auto-rows: minmax(100px, auto)
+            max-width: 500px
+            margin: 0 auto
+            background: var(--dark-highlight)
+            padding: 10px
+            border-radius: 10px
+            align-content: center
+            justify-content: center
+            align-items: center
+            .obsession-image
+                grid-column: 1 / span 2
+                grid-row: 1 / span 1
+                max-height: 260px
+                img
+                    display: block
+                    width: inherit
+                    height: inherit
+            .song-text
+                grid-column: 3 / span 4
+                grid-row: 1 / span 1
+                font-size: 24px
+                font-weight: 600
+                font-family: "Fraunces",serif
+                font-variation-settings: "SOFT" 0, "WONK" 1
+                span
+                    font-size: 28px
+                    font-weight: 800
+                    color: var(--base-font-color)
+                a, a:hover, a:visited
+                    text-decoration-color: var(--accent)
+.player-type
+    height: 50px
+
+#searchbox
+    margin-top: 10px
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 10px
+    grid-auto-rows: minmax(100px, auto)
+    @media (max-width: 832px)
+        grid-template-columns: repeat(2, 1fr)
+        grid-auto-rows: minmax(100px, auto)
+    li
+        font-size: 1.1em
+        list-style: none
+        align-content: center
+        padding: 20px
+        border-radius: 20px
+        background: var(--dark-highlight)
+        grid-column: span 1
+        grid-row: span 1
+        .post-result-main-title
+            font-size: 1.1em
+            font-family: 'Fraunces', serif
+            font-weight: 600
+            margin-bottom: 0.5em
+        .search-field-name
+            font-style: italic
+        .post-result-album-title
+            font-weight: 600

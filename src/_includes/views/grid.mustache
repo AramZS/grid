@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="A cool thing made with Glitch" />
+
+    <title>HC Personal DB</title>
+
+    <link
+      id="favicon"
+      rel="icon"
+      href="https://glitch.com/edit/favicon-app.ico"
+      type="image/x-icon"
+    />
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="/datagrid/normalize.css" />
+    <link rel="stylesheet" type="text/css" href="/datagrid/data-aug.css" />
+    <link rel="stylesheet" href="/datagrid/style.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="first-title">HC Personal DB</h1><span id="to-the-spin" onclick="(function(){window.location='/'})()"><span id="to-the-spin__seperator">|&nbsp;&nbsp;</span>(<span id="to-the-spin__link" onmouseout="deglitchify(this)" onmouseover="window.glitchify(this)" data-text="The Spin">The Spin</span>)</span>
+    </header>
+
+    <main id="grid-container">
+      {{{gridboxes}}}
+    </main>
+    
+    
+    <script src="/datagrid/aug-splice.js"></script>
+    <!-- import the webpage's client-side javascript file -->
+    <script src="/datagrid/script.js"></script>
+  </body>
+</html>
