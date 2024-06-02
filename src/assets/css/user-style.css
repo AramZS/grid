@@ -265,7 +265,7 @@ footer {
     .data-box:nth-child(1n + 2) {
     left: 15px;
 }
-
+/* https://augmented-ui.com/docs/index.html#core */
 .data-box {
     height: 200px;
     width: 80%;
@@ -276,8 +276,11 @@ footer {
     animation-timing-function: linear;
     height: 200px;
     width: 80%;
+    /* top left */
     --aug-clip-tl1: initial;
+    /* top right */
     --aug-round-tr1: initial;
+    /* bottom left */
     --aug-clip-br1: initial;
     --aug-round-bl1: initial;
     --aug-border: initial;
@@ -286,12 +289,13 @@ footer {
     --aug-border-bg: var(--gold);
 
     --aug-inlay: initial;
-    --aug-inlay-all: 4px;
+    --aug-inlay-all: 2px;
     --aug-inlay-bg: radial-gradient(at center center, gold, black);
-    --aug-inlay-opacity: 0.5;
-
+    --aug-inlay-opacity: 0.4;
+    /* bottom inset */
+    --aug-b2-width: 40px;
     --aug-clip-b1: initial;
-    --aug-clip-b2: initial;
+    --aug-rect-b2: initial;
     --aug-b-extend1: 50%;
     position: absolute;
     -webkit-font-smoothing: antialiased;
@@ -323,6 +327,13 @@ footer {
 
 .gridbox:nth-of-type(even) .gridbox-inner .data-box-collection .data-box {
     left: 65px !important;
+    --aug-clip-b1: ;
+    --aug-clip-b2: ;
+    --aug-rect-b2: ;
+    --aug-b2-width: initial;
+    --aug-b1-width: 40px;
+    --aug-rect-b1: initial;
+    --aug-clip-b2: initial;
 }
 
 .gridbox:nth-of-type(even)
