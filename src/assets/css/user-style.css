@@ -160,6 +160,7 @@ footer {
     background-color: transparent;
     padding: 8px;
     padding-top: 0;
+    position: relative;
 }
 
 .gridbox-inner > .general-tags {
@@ -176,33 +177,6 @@ footer {
 .gridbox:nth-of-type(even) .gridbox-inner {
     margin-left: 10px;
 }
-
-.data-box {
-    height: 200px;
-    width: 80%;
-    z-index: 100;
-    position: absolute;
-    -webkit-font-smoothing: antialiased;
-    cursor: pointer;
-    animation-timing-function: linear;
-}
-
-.data-box:first-of-type:not(.magnify) {
-    color: black;
-}
-
-.data-box:not(.fwd):not(.magnify) {
-}
-
-.data-box.bkwd:first-of-type:not(.magnify) {
-}
-
-.data-box:after {
-}
-
-.data-box:before {
-}
-
 @keyframes pulse {
     0% {
         transform: scale(1);
@@ -276,11 +250,10 @@ footer {
     }
 }
 
-.gridbox-inner .data-box-collection .data-box:nth-child(1n + 2) {
-    z-index: 50;
-    left: 25px;
-    top: 90px;
-    color: transparent;
+.gridbox-inner .data-box-collection {
+    margin-left: 30px;
+    width: calc(100% - 30px);
+    height: calc(100% - 60px);
 }
 
 .gridbox-inner .data-box:nth-child(1n + 2) {
@@ -290,11 +263,128 @@ footer {
     .gridbox-inner
     .data-box-collection
     .data-box:nth-child(1n + 2) {
-    left: 35px;
+    left: 15px;
 }
 
+.data-box {
+    height: 200px;
+    width: 80%;
+    z-index: 100;
+
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    animation-timing-function: linear;
+    height: 200px;
+    width: 80%;
+    --aug-clip-tl1: initial;
+    --aug-round-tr1: initial;
+    --aug-clip-br1: initial;
+    --aug-round-bl1: initial;
+    --aug-border: initial;
+    --aug-inset: initial;
+    --aug-border-all: 3px;
+    --aug-border-bg: var(--gold);
+
+    --aug-inlay: initial;
+    --aug-inlay-all: 4px;
+    --aug-inlay-bg: radial-gradient(at center center, gold, black);
+    --aug-inlay-opacity: 0.5;
+
+    --aug-clip-b1: initial;
+    --aug-clip-b2: initial;
+    --aug-b-extend1: 50%;
+    position: absolute;
+    -webkit-font-smoothing: antialiased;
+    cursor: pointer;
+    animation-timing-function: linear;
+    left: 20px;
+    top: 65px;
+}
+
+.data-box:first-of-type:not(.magnify) {
+    color: black;
+}
+
+.data-box:not(.fwd):not(.magnify) {
+}
+
+.data-box.bkwd:first-of-type:not(.magnify) {
+}
+
+.data-box:after {
+}
+
+.data-box:before {
+}
+
+.gridbox .gridbox-inner .data-box-collection .data-box:nth-child(1n + 2) {
+    z-index: 99;
+}
+
+.gridbox:nth-of-type(even) .gridbox-inner .data-box-collection .data-box {
+    left: 65px !important;
+}
+
+.gridbox:nth-of-type(even)
+    .gridbox-inner
+    .data-box-collection
+    .data-box:nth-child(1n + 2) {
+    left: calc(65px - 15px) !important;
+    top: calc(65px + 15px);
+    z-index: 95;
+}
+
+.gridbox:nth-of-type(odd)
+    .gridbox-inner
+    .data-box-collection
+    .data-box:nth-child(1n + 2) {
+    left: calc(20px + 15px) !important;
+    top: calc(65px + 15px);
+    z-index: 95;
+}
+/* counting starts at 1 */
+.gridbox:nth-of-type(even)
+    .gridbox-inner
+    .data-box-collection
+    .data-box:nth-child(1n + 3) {
+    left: calc(65px - 30px) !important;
+    top: calc(65px + 30px);
+    z-index: 90;
+}
+.gridbox:nth-of-type(odd)
+    .gridbox-inner
+    .data-box-collection
+    .data-box:nth-child(1n + 3) {
+    left: calc(20px + 30px) !important;
+    top: calc(65px + 30px);
+    z-index: 90;
+}
+.gridbox:nth-of-type(even)
+    .gridbox-inner
+    .data-box-collection
+    .data-box:nth-child(1n + 4) {
+    left: calc(65px - 45px) !important;
+    top: calc(65px + 45px);
+    z-index: 85;
+}
+.gridbox:nth-of-type(odd)
+    .gridbox-inner
+    .data-box-collection
+    .data-box:nth-child(1n + 4) {
+    left: calc(20px + 45px) !important;
+    top: calc(65px + 45px);
+    z-index: 85;
+}
+/**
+
+.gridbox-inner .data-box-collection .data-box:nth-child(1n + 2) {
+    z-index: 50;
+    left: 25px;
+    top: 90px;
+    color: transparent;
+}
 .gridbox-inner .data-box-collection .data-box:nth-child(1n + 3) {
-    left: 45px;
+    left: 25px;
     top: 110px;
 }
 
@@ -314,7 +404,7 @@ footer {
     .gridbox-inner
     .data-box-collection
     .data-box:nth-child(1n + 4) {
-    left: 75px !important;
+    left: 85px !important;
 }
 
 .gridbox-inner .data-box-collection .data-box:nth-child(1n + 5) {
@@ -333,7 +423,7 @@ footer {
 .gridbox-inner .data-box-collection .data-box:nth-child(1n + 6) {
     display: none;
 }
-
+**/
 .magnify {
     position: fixed;
     opacity: 1 !important;

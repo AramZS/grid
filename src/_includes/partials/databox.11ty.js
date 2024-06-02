@@ -5,7 +5,7 @@ module.exports = function (data, postObj) {
 	}
 
 	return /*html*/ `
-<div class="data-box">
+<div class="data-box" data-augmented-ui-border data-augmented-ui>
 	<h3>
 		${postObj.data.title}
 	</h3>

@@ -113,7 +113,7 @@ module.exports = async function (data, zones) {
 		  <h1 class="first-title">HC Personal DB</h1><span id="to-the-spin" onclick="(function(){window.location='/'})()"><span id="to-the-spin__seperator">|&nbsp;&nbsp;</span>(<span id="to-the-spin__link" onmouseout="deglitchify(this)" onmouseover="window.glitchify(this)" data-text="The Spin">The Spin</span>)</span>
 		</header>
 	
-		<main id="grid-container">
+		<main id="grid-container" class="container">
 			${grid}
 		</main>
 		

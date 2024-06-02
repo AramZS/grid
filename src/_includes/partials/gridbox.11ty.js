@@ -1,6 +1,6 @@
 module.exports = function (data, title, itemCount, tags, databoxes) {
 	return /*html*/ `
-<section class="gridbox"  data-augmented-ui>
+<section class="gridbox box"  data-augmented-ui>
   <div class="gridbox-inner">
     <div class="general-tags">
       <span>${tags}</span>
@@ -8,7 +8,7 @@ module.exports = function (data, title, itemCount, tags, databoxes) {
     <h2>
     ${title}: <span class="header-count">${itemCount} items</span>
     </h2>
-    <div class="data-box-collection">
+    <div data-augmented-ui-reset class="data-box-collection item-collection">
       ${databoxes}
     </div>
   </div>
