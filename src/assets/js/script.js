@@ -44,12 +44,14 @@ function bkClick(e) {
 window.modalCtrl = {
 	returnContainer: null,
 	modalDatabox: (event) => {
+		event.stopPropagation();
+		console.log("window.modalCtrl.modalDatabox");
 		console.log(event.target.classList);
 		if (event.target.classList.contains("magnify")) {
 			return true;
 		} else {
 			window.modalCtrl.returnContainer = event.target.closest(
-				".data-box-collection"
+				".data-box-collection",
 			);
 			document.querySelectorAll(".data-box").forEach(function (e) {
 				e.classList.remove("magnify");
@@ -62,7 +64,7 @@ window.modalCtrl = {
 			targetDiv.removeEventListener(
 				"click",
 				window.modalCtrl.modalDatabox,
-				true
+				true,
 			);
 			event.stopImmediatePropagation();
 			return false;
@@ -84,7 +86,9 @@ window.deglitchify = function (el) {
 
 window.onload = function () {
 	document.querySelectorAll(".data-box").forEach(function (databox) {
-		databox.addEventListener("click", window.modalCtrl.modalDatabox, true);
+		console.log("Attach listener to databox", databox);
+		databox.addEventListener("click", window.modalCtrl.modalDatabox);
+		databox.dataset.clickStatus = "true";
 	});
 	document.querySelectorAll(".data-box > .close").forEach(function (databox) {
 		databox.addEventListener("click", (event) => {
@@ -97,7 +101,7 @@ window.onload = function () {
 				event.target.parentElement.addEventListener(
 					"click",
 					window.modalCtrl.modalDatabox,
-					true
+					true,
 				);
 				event.stopImmediatePropagation();
 				return false;
